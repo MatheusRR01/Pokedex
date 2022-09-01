@@ -21,5 +21,7 @@ namespace Pokedex.Models
         [StringLength(7, ErrorMessage = "A Cor deve possuir no máximo 7 caracteres")]
         public string Color { get; set; } = string.Empty;
 
+        public ICollection<PokemonTypes> PokemonsOfThisTypes { get; set; } = new List<PokemonTypes>();
+        public ICollection<Weaknesses> PokemonsWithThisWeaknesses { get; set; } = new List<Weaknesses>();
     }
 }
