@@ -6,10 +6,10 @@
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">Pokedex</h1>
-            @foreach (var Type in ViewBag.Types)
+            @foreach (var type in ViewBag.Types)
             {
-                <a href="#" class="btn btn-primary my-2">
-                    @Type.Name
+                <a href="#" class="btn my-2 text-white" style="background-color:@type.Color">
+                    @type.Name
                 </a>
             }
         </div>

@@ -42,13 +42,13 @@ namespace Pokedex.Data
                 pt => new { pt.PokemonNumber, pt.TypeId }
             );
             builder.Entity<PokemonTypes>()
-                .HasOne(pa => pa.Pokemon)
+                .HasOne(pt => pt.Pokemon)
                 .WithMany(p => p.Types)
-                .HasForeignKey(pa => pa.PokemonNumber);
+                .HasForeignKey(pt => pt.PokemonNumber);
 
             builder.Entity<PokemonTypes>()
                 .HasOne(pa => pa.Type)
-                .WithMany(a => a.PokemonsOfThisTypes)
+                .WithMany(t => t.PokemonsOfThisTypes)
                 .HasForeignKey(pa => pa.TypeId);
             #endregion
 
@@ -63,7 +63,7 @@ namespace Pokedex.Data
 
             builder.Entity<Weaknesses>()
                 .HasOne(w => w.Type)
-                .WithMany(a => a.PokemonsWithThisWeaknesses)
+                .WithMany(t => t.PokemonsWithThisWeaknesses)
                 .HasForeignKey(w => w.TypeId);
             #endregion
         }
