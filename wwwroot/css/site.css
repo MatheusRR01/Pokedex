@@ -1,18 +1,17 @@
-html {
-  font-size: 14px;
+.card img
+{
+  background-color: lightgrey;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.card:hover
+{
+  border: 2px solid black;
+  transform: scale(1.05);
+  transition: 0.2s;
+  z-index: 1000;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+.cursor-pointer
+{
+  cursor: pointer;
 }
